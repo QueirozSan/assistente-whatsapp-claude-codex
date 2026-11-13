@@ -1,0 +1,106 @@
+{
+  "_leia": "Copie este arquivo para config.json e troque os campos marcados com TROQUE. config.json nunca vai para o Git.",
+  "nome_assistente": "Luna",
+  "gatilhos": [
+    "luna"
+  ],
+  "gatilhos_audio": [
+    "luna",
+    "lua",
+    "luana"
+  ],
+  "numeros_acesso_total": [
+    "TROQUE_pelo_seu_numero_com_DDI_e_DDD_ex_5511999999999"
+  ],
+  "motor": "claude",
+  "modelo": "",
+  "modelo_perguntas": "",
+  "modelo_forte": "",
+  "modelo_maximo": "",
+  "modelo_codex": "",
+  "codex_sandbox": "workspace-write",
+  "exigir_token_webhook": false,
+  "dm_dono_sem_gatilho": true,
+  "pasta_de_trabalho": "TROQUE_pela_pasta_onde_ficam_seus_projetos",
+  "mensagens_de_historico": 15,
+  "max_turnos_dono": 80,
+  "timeout_dono_s": 3600,
+  "timeout_perguntas_s": 120,
+  "sessao_expira_h": 12,
+  "max_mb_arquivo": 64,
+  "max_arquivos_por_resposta": 5,
+  "progresso": {
+    "ativo": true,
+    "intervalos_s": [
+      45,
+      90,
+      150,
+      240,
+      300
+    ],
+    "max_mensagens": 15,
+    "min_gap_s": 30,
+    "max_por_hora_chat": 30
+  },
+  "plano": {
+    "pausa_padrao_s": 1800,
+    "reserva_uso_5h": 0.85,
+    "reserva_uso_7d": 0.95
+  },
+  "falhas_seguidas_max": 3,
+  "pausa_falhas_s": 600,
+  "limites": {
+    "idade_max_s": 180,
+    "max_chars_pergunta": 1500,
+    "por_remetente": [
+      4,
+      600
+    ],
+    "por_conversa": [
+      8,
+      600
+    ],
+    "global_hora": [
+      30,
+      3600
+    ],
+    "global_dia": 120,
+    "aviso_a_cada_s": 900,
+    "dono_por_minuto": 10,
+    "disjuntor_respostas": 6,
+    "disjuntor_global_respostas": 15,
+    "disjuntor_janela_s": 60,
+    "disjuntor_pausa_s": 900
+  },
+  "voz": {
+    "modelo": "medium",
+    "idioma": "pt",
+    "timeout_s": 300
+  },
+  "midia": {
+    "max_mb": 100,
+    "ffmpeg": "",
+    "quadros_video": 6,
+    "manter_dias": 7
+  },
+  "resumo": {
+    "ativo": false,
+    "hora": "21:00"
+  },
+  "alertas": {
+    "ativo": false,
+    "intervalo_min": 30,
+    "silencio": [
+      "23:00",
+      "07:00"
+    ]
+  },
+  "relatorio": {
+    "ativo": false,
+    "hora": "07:30",
+    "ate_hora": "18:00",
+    "timeout_s": 240,
+    "lembretes": [],
+    "modelo": "1"
+  }
+}

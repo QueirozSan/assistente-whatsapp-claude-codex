@@ -1,0 +1,115 @@
+{
+  "bloqueio_total": [
+    "aprovacoes\\.json",
+    "pendentes\\.json",
+    "\\.bridge-token",
+    "messages\\.db",
+    "whatsapp\\.db",
+    "guarda\\.py",
+    "guarda_regras\\.json",
+    "whatsapp-bridge[\\\\/]+store",
+    "ASSISTENTE_DB",
+    "ASSISTENTE_DONO"
+  ],
+  "bash": [
+    [
+      "\\brm\\s+(-\\w+\\s+)*-\\w*[rf]",
+      "apagar pasta ou projeto",
+      "apagar"
+    ],
+    [
+      "\\bremove-item\\b|\\bri\\s+-r|\\bclear-content\\b",
+      "apagar pasta ou projeto",
+      "apagar"
+    ],
+    [
+      "\\b(del|erase)\\s+\\S",
+      "apagar pasta ou projeto",
+      "apagar"
+    ],
+    [
+      "\\brmdir\\b|\\brd\\s+/s",
+      "apagar pasta ou projeto",
+      "apagar"
+    ],
+    [
+      "shutil\\.rmtree|\\brmtree\\b|rimraf|\\bfs\\.rm(sync)?\\b.*recursive",
+      "apagar pasta ou projeto (por código)",
+      ""
+    ],
+    [
+      "\\bfind\\b.*-delete",
+      "apagar vários arquivos (find -delete)",
+      ""
+    ],
+    [
+      "\\bgit\\s+(clean|reset\\s+--hard|filter-)|\\bgit\\s+push\\b.*(\\s-f\\b|--force)|\\bgh\\s+repo\\s+delete",
+      "git destrutivo (pode perder trabalho)",
+      ""
+    ],
+    [
+      "\\bformat(\\.com)?\\s+[a-z]:|\\bdiskpart\\b|\\bbcdedit\\b",
+      "operação de disco",
+      ""
+    ],
+    [
+      "\\bdrop\\s+(database|schema|table)\\b|\\btruncate\\s+(table\\s+)?\\w",
+      "apagar banco de dados",
+      ""
+    ],
+    [
+      "(taskkill|stop-process|pkill)[^|;&]*(whatsapp|bridge|responder|claude|pythonw)",
+      "encerrar o WhatsApp/responder",
+      ""
+    ],
+    [
+      "-comtrading|modo_execucao\\s*[=:]\\s*['\\\"]?real",
+      "DINHEIRO REAL: ativar operações reais de trading",
+      ""
+    ]
+  ],
+  "bash_combinados": [
+    [
+      [
+        "binance|ccxt|bybit|okx|kucoin|kraken|coinbase|mexc|bitget|hyperliquid",
+        "create_order|new_order|create_(market|limit)_order|market_(buy|sell)|\\.(buy|sell)\\(|/api/v3/order|/fapi/v1/order|withdraw|sapi/v1/(capital|asset)|\\btransfer\\("
+      ],
+      "DINHEIRO REAL: ordem ou saque em corretora"
+    ]
+  ],
+  "caminhos_escrita": [
+    [
+      "(^|[\\/])\\.env(\\.[\\w-]+)?$",
+      "editar arquivo de chaves (.env)"
+    ],
+    [
+      "responder[\\\\/]+(responder\\.py|config\\.json|manter|registrar|iniciar|claude_dono)",
+      "alterar o próprio responder do WhatsApp"
+    ],
+    [
+      "[\\\\/]\\.ssh[\\\\/]",
+      "editar chaves SSH"
+    ],
+    [
+      "windows[\\\\/]system32",
+      "editar arquivos do sistema"
+    ]
+  ],
+  "mcp": [
+    [
+      "Supabase__(execute_sql)",
+      "apagar dados no Supabase",
+      "sql"
+    ],
+    [
+      "Supabase__(delete_|pause_project|restore_project|reset_branch)",
+      "apagar ou pausar projeto no Supabase"
+    ],
+    [
+      "mcp__.*__.*(destroy|purge|wipe|drop_)",
+      "apagar em ferramenta externa"
+    ]
+  ],
+  "pastas_seguras_para_apagar": "(node_modules|__pycache__|\\.pytest_cache|\\.cache|(^|[\\\\/])(cache|dist|build|tmp|temp|out|\\.next|coverage|\\.turbo|logs)([\\\\/]|$)|scratchpad|appdata[\\\\/]local[\\\\/]temp|^/tmp|[\\\\/]tmp[\\\\/]|\\.tmp$|\\.log$|\\.pyc$)",
+  "arquivos_sensiveis_apagar": "(^|[\\\\/])\\.env(\\.|$)|\\.git([\\\\/]|$)|\\.(db|sqlite3?|key|pem)$"
+}

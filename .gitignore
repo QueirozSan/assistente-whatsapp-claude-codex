@@ -1,0 +1,84 @@
+# Databases
+*.db
+
+# Logs
+*.log
+
+# Config
+claude_desktop_config.json
+
+# Claude Code local settings (per-user)
+.claude/settings.local.json
+
+# OS files
+.DS_Store
+**/.DS_Store
+
+# Node
+node_modules/
+package-lock.json
+
+# Go binaries
+whatsapp-bridge/whatsapp-bridge
+whatsapp-bridge/whatsapp-client
+*.exe
+
+# WhatsApp data (personal/sensitive)
+whatsapp-bridge/store/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Environment
+.env
+.env.local
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+/store
+
+# --- dados pessoais do assistente: NUNCA vão para o Git ---
+.env
+.env.*
+!.env.example
+bridge.log*
+responder/config.json
+responder/config.json.*.bak
+responder/contexto.md.*.bak
+responder/contexto.md
+responder/estado.json
+responder/eventos.jsonl
+responder/lembretes.json
+responder/memoria.json
+responder/pendentes.json
+responder/ranking_hist.json
+responder/sessoes.json
+responder/entrada/
+responder/pasta_vazia/
+responder/.venv-voz/
+.venv/
+**/.venv/
+responder/contexto_publico.md
+responder/relatorio*.py
+responder/claude_dono_settings.json
+responder/aprovacoes.json
+responder/*.bak
+*.bak
+whatsapp-bridge/store/
